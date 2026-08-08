@@ -19,10 +19,10 @@ const config: Config = {
         "on-primary-fixed": "#002107",
         error: "#ffb4ab",
         "primary-fixed": "#77fd8c",
-        "on-tertiary-fixed": "#331200",
+        "primary-container": "#59e073",
         "on-secondary-fixed": "#1a1c1c",
         "error-container": "#93000a",
-        "primary-container": "#59e073",
+        "on-tertiary-fixed": "#331200",
         "on-tertiary-fixed-variant": "#6c3a1c",
         "surface-container-lowest": "#0d0e0f",
         "surface-variant": "#343535",
@@ -67,7 +67,8 @@ const config: Config = {
         full: "9999px",
       },
       spacing: {
-        "left-panel-width": "430px",
+        "left-panel-width": "396px",
+        "left-panel-width-lg": "516px",
         "stack-md": "24px",
         "stack-sm": "8px",
         "container-padding": "64px",
@@ -76,60 +77,30 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["Hanken Grotesk", "sans-serif"],
-        mono: ["Geist Mono", "monospace"],
         grotesk: ["Hanken Grotesk", "sans-serif"],
         geist: ["Geist", "sans-serif"],
       },
       fontSize: {
         "headline-lg-mobile": [
           "32px",
-          {
-            lineHeight: "40px",
-            letterSpacing: "-0.01em",
-            fontWeight: "500",
-          },
+          { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "500" },
         ],
         "label-sm": [
           "12px",
-          {
-            lineHeight: "16px",
-            letterSpacing: "0.05em",
-            fontWeight: "500",
-          },
+          { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "500" },
         ],
-        "body-md": [
-          "18px",
-          {
-            lineHeight: "28px",
-            fontWeight: "400",
-          },
-        ],
+        "body-md": ["18px", { lineHeight: "28px", fontWeight: "400" }],
         "headline-lg": [
           "48px",
-          {
-            lineHeight: "56px",
-            letterSpacing: "-0.02em",
-            fontWeight: "500",
-          },
+          { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "500" },
         ],
         "display-lg": [
           "80px",
-          {
-            lineHeight: "90px",
-            letterSpacing: "-0.04em",
-            fontWeight: "600",
-          },
+          { lineHeight: "90px", letterSpacing: "-0.04em", fontWeight: "600" },
         ],
       },
       animation: {
         "spin-slow": "spin 10s linear infinite",
-        pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
-      },
-      keyframes: {
-        shimmer: {
-          "0%": { backgroundPosition: "-200% 0" },
-          "100%": { backgroundPosition: "200% 0" },
-        },
       },
     },
   },
