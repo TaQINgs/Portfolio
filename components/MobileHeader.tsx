@@ -58,7 +58,7 @@ export default function MobileHeader() {
         </Link>
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors text-on-surface"
+          className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-on-surface"
           aria-label="Toggle Menu"
         >
           <span className="material-symbols-outlined" style={{ fontSize: "22px" }}>
@@ -78,7 +78,7 @@ export default function MobileHeader() {
             key={item.href}
             href={item.href}
             onClick={() => setIsMenuOpen(false)}
-            className="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-white/5 transition-all font-geist text-label-sm uppercase tracking-widest"
+            className="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-black/5 dark:hover:bg-white/5 transition-all font-geist text-label-sm uppercase tracking-widest"
           >
             {item.label}
           </Link>

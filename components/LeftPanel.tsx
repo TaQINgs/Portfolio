@@ -85,8 +85,8 @@ export default function LeftPanel() {
         style={{
           opacity: 0,
           borderRadius: "40px",
-          border: "2px solid #c2c2be",
-          boxShadow: "0 0 0 1px rgba(0,0,0,0.04), 0 28px 70px rgba(0,0,0,0.20)",
+          border: "2px solid var(--card-border-color)",
+          boxShadow: "var(--card-shadow)",
         }}
       >
         {/* ── Clipped bg (photo + gradient) ── */}
@@ -238,10 +238,10 @@ export default function LeftPanel() {
             /* sits flush against the left border */
             translate: "0 -50%",
             /* Same grey as card border — looks like a physical device button */
-            background: "#e8e8e2",
-            borderTop: "2px solid #c2c2be",
-            borderBottom: "2px solid #c2c2be",
-            borderLeft: "2px solid #c2c2be",
+            background: "var(--notch-bg)",
+            borderTop: "2px solid var(--notch-border)",
+            borderBottom: "2px solid var(--notch-border)",
+            borderLeft: "2px solid var(--notch-border)",
             borderRight: "none",
             borderRadius: "0 10px 10px 0",
             padding: "14px 7px",
@@ -256,8 +256,8 @@ export default function LeftPanel() {
             }}
           />
           <span
-            className="font-geist text-black/50 uppercase"
-            style={{ fontSize: "9px", letterSpacing: "0.18em" }}
+            className="font-geist uppercase"
+            style={{ fontSize: "9px", letterSpacing: "0.18em", color: "var(--color-on-surface-variant)" }}
           >
             Available for Work
           </span>

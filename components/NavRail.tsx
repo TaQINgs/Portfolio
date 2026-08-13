@@ -32,6 +32,21 @@ export default function NavRail() {
     );
   }, [mounted]);
 
+  /**
+   * Toggle dark/light mode by flipping the `dark` class on <html>.
+   * Persist the preference in localStorage so the anti-flash script
+   * in layout.tsx can restore it on the next page load.
+   */
+  const toggleTheme = () => {
+    const html = document.documentElement;
+    const willBeDark = html.classList.toggle("dark");
+    try {
+      localStorage.setItem("theme", willBeDark ? "dark" : "light");
+    } catch (_) {
+      /* ignore storage errors in restricted environments */
+    }
+  };
+
   return (
     <nav className="hidden md:flex flex-col justify-center fixed right-6 top-0 h-screen z-40">
       <div
@@ -39,23 +54,32 @@ export default function NavRail() {
         className="glass-panel rounded-full py-6 px-2 flex flex-col items-center gap-1 shadow-2xl"
         style={{ opacity: 0 }}
       >
-        {/* Theme toggle */}
+        {/* ── Theme toggle ── */}
         <button
-          className="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-all duration-200"
+          onClick={toggleTheme}
+          className="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-black/5 dark:hover:bg-white/10 hover:text-on-surface transition-all duration-200"
           title="Toggle Theme"
           aria-label="Toggle Theme"
         >
+          {/* Sun icon — visible in light mode, hidden in dark */}
           <span
-            className="material-symbols-outlined"
+            className="material-symbols-outlined dark:hidden"
             style={{ fontSize: "20px" }}
           >
             light_mode
           </span>
+          {/* Moon icon — hidden in light mode, visible in dark */}
+          <span
+            className="material-symbols-outlined hidden dark:inline-block"
+            style={{ fontSize: "20px" }}
+          >
+            dark_mode
+          </span>
         </button>
 
-        <div className="h-px w-6 bg-black/10 my-2" />
+        <div className="h-px w-6 bg-black/10 dark:bg-white/10 my-2" />
 
-        {/* Nav Items */}
+        {/* ── Nav Items ── */}
         {navItems.map((item) => {
           const isActive = pathname === item.href;
           return (
@@ -65,7 +89,7 @@ export default function NavRail() {
               className={`relative group w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 ${
                 isActive
                   ? "bg-primary-container/15 text-primary-container"
-                  : "text-on-surface-variant hover:text-on-surface hover:bg-black/5"
+                  : "text-on-surface-variant hover:text-on-surface hover:bg-black/5 dark:hover:bg-white/5"
               }`}
               aria-label={item.label}
             >
@@ -90,12 +114,12 @@ export default function NavRail() {
           );
         })}
 
-        <div className="h-px w-6 bg-black/10 my-2" />
+        <div className="h-px w-6 bg-black/10 dark:bg-white/10 my-2" />
 
-        {/* Back to top */}
+        {/* ── Back to top ── */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-all duration-200"
+          className="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-black/5 dark:hover:bg-white/10 hover:text-on-surface transition-all duration-200"
           title="Back to Top"
           aria-label="Back to Top"
         >

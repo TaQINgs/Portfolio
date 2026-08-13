@@ -10,60 +10,69 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        /* ── Light Mode Palette ── */
-        background: "#eeeee8",
-        "on-background": "#1a1a1a",
-        surface: "#f5f5f0",
-        "on-surface": "#1a1a1a",
-        "surface-variant": "#e0e0d8",
-        "on-surface-variant": "#5a6355",
-        "surface-container": "#ffffff",
-        "surface-container-low": "#f0f0ea",
-        "surface-container-high": "#e8e8e2",
-        "surface-container-highest": "#dededa",
-        "surface-container-lowest": "#fafaf5",
-        "surface-bright": "#ffffff",
-        "surface-dim": "#dcdcd6",
-        "surface-tint": "#3aab52",
-        /* greens */
-        primary: "#3aab52",
-        "primary-fixed": "#b8f5c4",
-        "primary-fixed-dim": "#3aab52",
-        "primary-container": "#3aab52",
-        "on-primary": "#ffffff",
-        "on-primary-fixed": "#002107",
-        "on-primary-fixed-variant": "#00531d",
-        "on-primary-container": "#003912",
-        "inverse-primary": "#77fd8c",
-        /* secondary */
-        secondary: "#5a6355",
-        "secondary-fixed": "#dce8d5",
-        "secondary-fixed-dim": "#bfc9ba",
-        "secondary-container": "#dde8d6",
-        "on-secondary": "#ffffff",
-        "on-secondary-fixed": "#1a1e1a",
-        "on-secondary-fixed-variant": "#3a4438",
-        "on-secondary-container": "#192018",
-        /* tertiary */
-        tertiary: "#7a4526",
-        "tertiary-container": "#ffdbca",
-        "tertiary-fixed": "#ffdbca",
-        "tertiary-fixed-dim": "#ffb68f",
-        "on-tertiary": "#ffffff",
-        "on-tertiary-fixed": "#331200",
-        "on-tertiary-fixed-variant": "#6c3a1c",
-        "on-tertiary-container": "#5a2e12",
-        /* error */
-        error: "#ba1a1a",
-        "error-container": "#ffdad6",
-        "on-error": "#ffffff",
-        "on-error-container": "#410002",
-        /* outline */
-        outline: "#73796e",
-        "outline-variant": "#c2c9bc",
-        /* inverse */
-        "inverse-surface": "#2e312d",
-        "inverse-on-surface": "#f0f1eb",
+        /* All values reference CSS custom properties defined in globals.css.
+           Switching the .dark class on <html> swaps the entire palette. */
+
+        /* ── Core surfaces ── */
+        background:                    "var(--color-background)",
+        "on-background":               "var(--color-on-background)",
+        surface:                       "var(--color-surface)",
+        "on-surface":                  "var(--color-on-surface)",
+        "surface-variant":             "var(--color-surface-variant)",
+        "on-surface-variant":          "var(--color-on-surface-variant)",
+        "surface-container":           "var(--color-surface-container)",
+        "surface-container-low":       "var(--color-surface-container-low)",
+        "surface-container-high":      "var(--color-surface-container-high)",
+        "surface-container-highest":   "var(--color-surface-container-highest)",
+        "surface-container-lowest":    "var(--color-surface-container-lowest)",
+        "surface-bright":              "var(--color-surface-bright)",
+        "surface-dim":                 "var(--color-surface-dim)",
+        "surface-tint":                "var(--color-surface-tint)",
+
+        /* ── Primary (green) ── */
+        primary:                       "var(--color-primary)",
+        "primary-fixed":               "var(--color-primary-fixed)",
+        "primary-fixed-dim":           "var(--color-primary-fixed-dim)",
+        "primary-container":           "var(--color-primary-container)",
+        "on-primary":                  "var(--color-on-primary)",
+        "on-primary-fixed":            "var(--color-on-primary-fixed)",
+        "on-primary-fixed-variant":    "var(--color-on-primary-fixed-variant)",
+        "on-primary-container":        "var(--color-on-primary-container)",
+        "inverse-primary":             "var(--color-inverse-primary)",
+
+        /* ── Secondary ── */
+        secondary:                     "var(--color-secondary)",
+        "secondary-fixed":             "var(--color-secondary-fixed)",
+        "secondary-fixed-dim":         "var(--color-secondary-fixed-dim)",
+        "secondary-container":         "var(--color-secondary-container)",
+        "on-secondary":                "var(--color-on-secondary)",
+        "on-secondary-fixed":          "var(--color-on-secondary-fixed)",
+        "on-secondary-fixed-variant":  "var(--color-on-secondary-fixed-variant)",
+        "on-secondary-container":      "var(--color-on-secondary-container)",
+
+        /* ── Tertiary ── */
+        tertiary:                      "var(--color-tertiary)",
+        "tertiary-container":          "var(--color-tertiary-container)",
+        "tertiary-fixed":              "var(--color-tertiary-fixed)",
+        "tertiary-fixed-dim":          "var(--color-tertiary-fixed-dim)",
+        "on-tertiary":                 "var(--color-on-tertiary)",
+        "on-tertiary-fixed":           "var(--color-on-tertiary-fixed)",
+        "on-tertiary-fixed-variant":   "var(--color-on-tertiary-fixed-variant)",
+        "on-tertiary-container":       "var(--color-on-tertiary-container)",
+
+        /* ── Error ── */
+        error:                         "var(--color-error)",
+        "error-container":             "var(--color-error-container)",
+        "on-error":                    "var(--color-on-error)",
+        "on-error-container":          "var(--color-on-error-container)",
+
+        /* ── Outline ── */
+        outline:                       "var(--color-outline)",
+        "outline-variant":             "var(--color-outline-variant)",
+
+        /* ── Inverse ── */
+        "inverse-surface":             "var(--color-inverse-surface)",
+        "inverse-on-surface":          "var(--color-inverse-on-surface)",
       },
       borderRadius: {
         DEFAULT: "0.25rem",
@@ -74,18 +83,18 @@ const config: Config = {
         full: "9999px",
       },
       spacing: {
-        "left-panel-width": "396px",
+        "left-panel-width":    "396px",
         "left-panel-width-lg": "516px",
-        "stack-md": "24px",
-        "stack-sm": "8px",
-        "container-padding": "64px",
-        "stack-lg": "48px",
-        gutter: "32px",
+        "stack-md":            "24px",
+        "stack-sm":            "8px",
+        "container-padding":   "64px",
+        "stack-lg":            "48px",
+        gutter:                "32px",
       },
       fontFamily: {
-        sans: ["Hanken Grotesk", "sans-serif"],
+        sans:    ["Hanken Grotesk", "sans-serif"],
         grotesk: ["Hanken Grotesk", "sans-serif"],
-        geist: ["Geist", "sans-serif"],
+        geist:   ["Geist", "sans-serif"],
       },
       fontSize: {
         "headline-lg-mobile": [

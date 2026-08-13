@@ -26,8 +26,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    /*
+     * suppressHydrationWarning prevents React from complaining that the
+     * server-rendered HTML has no `dark` class while the client might add
+     * it via the anti-flash script below before hydration.
+     */
+    <html lang="en" suppressHydrationWarning>
       <head>
+        {/*
+         * Anti-flash script: runs synchronously before the first paint.
+         * Reads the saved preference from localStorage (or falls back to
+         * the OS preference) and immediately adds the `dark` class so the
+         * page never flashes the wrong theme.
+         */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');if(!t)t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';if(t==='dark')document.documentElement.classList.add('dark')}catch(e){}})();`,
+          }}
+        />
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
