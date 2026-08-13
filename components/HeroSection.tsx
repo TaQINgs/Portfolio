@@ -53,7 +53,7 @@ export default function HeroSection() {
       <div className="hidden md:flex justify-between items-center absolute -top-14 left-0 right-0">
         <div className="flex items-center gap-3">
           {/* Avatar */}
-          <div className="w-10 h-10 rounded-full overflow-hidden border border-white/10 flex-shrink-0">
+          <div className="w-10 h-10 rounded-full overflow-hidden border border-black/10 flex-shrink-0">
             <img
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfYAhzYNtoEmMG1ciCHExQzc_hLFTPc8KjHeVWXXNKMzurAUUjbfExOM1YtpW0rQyTHjj4RzFoOFSp9EL2Yn4n5KVDGTLir-i2j4eT81Txv3IGRVvCNJtTUoMVngpgnu9L_-1FDFSynSrIIoN-19HVOQEPQxvbIDvrhVzMNlpHp0xqwI32U2TdVt12VwFS9i5DUwJRW9QbpR7A4KIRvIILHphpOKA8Riu-GDLEz7zKjAzhEY3O_w"
               alt="Avatar"
@@ -89,7 +89,7 @@ export default function HeroSection() {
           <span key={i} className="word inline-block mr-[0.22em]" style={{ opacity: 0 }}>{w}</span>
         ))}
         <span
-          className="word inline-block bg-primary-container text-background px-4 py-1 rounded-full -rotate-2 hover:rotate-0 transition-transform cursor-pointer mr-[0.22em]"
+          className="word inline-block bg-primary-container text-white px-4 py-1 rounded-full -rotate-2 hover:rotate-0 transition-transform cursor-pointer mr-[0.22em]"
           style={{ opacity: 0 }}
         >
           websites
@@ -123,7 +123,7 @@ export default function HeroSection() {
               ref={badgeRef}
               className="w-full h-full"
               viewBox="0 0 100 100"
-              style={{ color: "rgba(255,255,255,0.35)" }}
+              style={{ color: "rgba(30,30,30,0.55)" }}
             >
               <path
                 id="badge-curve"
@@ -137,9 +137,9 @@ export default function HeroSection() {
             <div className="absolute inset-0 flex items-center justify-center">
               <div
                 className="w-14 h-14 rounded-full flex items-center justify-center"
-                style={{ border: "1px solid rgba(255,255,255,0.12)" }}
+                style={{ border: "1px solid rgba(0,0,0,0.12)" }}
               >
-                <span className="material-symbols-outlined" style={{ fontSize: "20px", color: "rgba(255,255,255,0.40)" }}>
+                <span className="material-symbols-outlined" style={{ fontSize: "20px", color: "rgba(30,30,30,0.55)" }}>
                   all_inclusive
                 </span>
               </div>
@@ -151,7 +151,7 @@ export default function HeroSection() {
       {/* ── Clients bar ── */}
       <div
         className="mt-stack-lg pt-stack-md flex flex-col md:flex-row items-start md:items-center justify-between gap-stack-md"
-        style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}
+        style={{ borderTop: "1px solid rgba(0,0,0,0.10)" }}
       >
         <div className="flex items-center gap-2 text-on-surface-variant">
           <span className="material-symbols-outlined" style={{ fontSize: "18px" }}>language</span>

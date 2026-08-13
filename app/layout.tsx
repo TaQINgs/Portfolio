@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
   },
-  themeColor: "#121414",
+  themeColor: "#eeeee8",
 };
 
 export default function RootLayout({
@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <head>
         <link
           rel="stylesheet"

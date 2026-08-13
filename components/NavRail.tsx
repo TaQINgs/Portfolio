@@ -53,7 +53,7 @@ export default function NavRail() {
           </span>
         </button>
 
-        <div className="h-px w-6 bg-white/10 my-2" />
+        <div className="h-px w-6 bg-black/10 my-2" />
 
         {/* Nav Items */}
         {navItems.map((item) => {
@@ -65,7 +65,7 @@ export default function NavRail() {
               className={`relative group w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 ${
                 isActive
                   ? "bg-primary-container/15 text-primary-container"
-                  : "text-on-surface-variant hover:text-on-surface hover:bg-white/5"
+                  : "text-on-surface-variant hover:text-on-surface hover:bg-black/5"
               }`}
               aria-label={item.label}
             >
@@ -90,7 +90,7 @@ export default function NavRail() {
           );
         })}
 
-        <div className="h-px w-6 bg-white/10 my-2" />
+        <div className="h-px w-6 bg-black/10 my-2" />
 
         {/* Back to top */}
         <button
