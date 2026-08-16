@@ -18,9 +18,12 @@ export default function NavRail() {
   const pathname = usePathname();
   const navRef = useRef<HTMLDivElement>(null);
   const [mounted, setMounted] = useState(false);
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
     setMounted(true);
+    // Read the current theme from the <html> class (set by the anti-flash script)
+    setIsDark(document.documentElement.classList.contains("dark"));
   }, []);
 
   useEffect(() => {
@@ -34,18 +37,22 @@ export default function NavRail() {
 
   /**
    * Toggle dark/light mode by flipping the `dark` class on <html>.
-   * Persist the preference in localStorage so the anti-flash script
-   * in layout.tsx can restore it on the next page load.
+   * Syncs React state so the icon updates immediately without a flash.
    */
   const toggleTheme = () => {
     const html = document.documentElement;
     const willBeDark = html.classList.toggle("dark");
+    setIsDark(willBeDark);
     try {
       localStorage.setItem("theme", willBeDark ? "dark" : "light");
     } catch (_) {
-      /* ignore storage errors in restricted environments */
+      /* ignore storage errors */
     }
   };
+
+  // Before client mounts, show sun as default (matches :root = light)
+  const themeIcon    = !mounted ? "light_mode" : isDark ? "dark_mode" : "light_mode";
+  const themeTooltip = !mounted ? "Dark Mode"  : isDark ? "Light Mode" : "Dark Mode";
 
   return (
     <nav className="hidden md:flex flex-col justify-center fixed right-6 top-0 h-screen z-40">
@@ -57,24 +64,16 @@ export default function NavRail() {
         {/* ── Theme toggle ── */}
         <button
           onClick={toggleTheme}
-          className="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-black/5 dark:hover:bg-white/10 hover:text-on-surface transition-all duration-200"
-          title="Toggle Theme"
+          className="relative group w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-black/5 dark:hover:bg-white/10 hover:text-on-surface transition-all duration-200"
           aria-label="Toggle Theme"
         >
-          {/* Sun icon — visible in light mode, hidden in dark */}
-          <span
-            className="material-symbols-outlined dark:hidden"
-            style={{ fontSize: "20px" }}
-          >
-            light_mode
+          {/* Single icon — controlled by React state, no CSS show/hide conflict */}
+          <span className="material-symbols-outlined" style={{ fontSize: "20px" }}>
+            {themeIcon}
           </span>
-          {/* Moon icon — hidden in light mode, visible in dark */}
-          <span
-            className="material-symbols-outlined hidden dark:inline-block"
-            style={{ fontSize: "20px" }}
-          >
-            dark_mode
-          </span>
+
+          {/* Tooltip — opposite of current mode (tells user what clicking will do) */}
+          <div className="nav-tooltip">{themeTooltip}</div>
         </button>
 
         <div className="h-px w-6 bg-black/10 dark:bg-white/10 my-2" />
@@ -119,16 +118,13 @@ export default function NavRail() {
         {/* ── Back to top ── */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-black/5 dark:hover:bg-white/10 hover:text-on-surface transition-all duration-200"
-          title="Back to Top"
+          className="relative group w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-black/5 dark:hover:bg-white/10 hover:text-on-surface transition-all duration-200"
           aria-label="Back to Top"
         >
-          <span
-            className="material-symbols-outlined"
-            style={{ fontSize: "20px" }}
-          >
+          <span className="material-symbols-outlined" style={{ fontSize: "20px" }}>
             arrow_upward
           </span>
+          <div className="nav-tooltip">Back to Top</div>
         </button>
       </div>
     </nav>

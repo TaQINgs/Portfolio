@@ -85,16 +85,16 @@ export default function LeftPanel() {
         style={{
           opacity: 0,
           borderRadius: "40px",
-          border: "2px solid var(--card-border-color)",
+          border: "7px solid var(--card-border-color)",
           boxShadow: "var(--card-shadow)",
         }}
       >
         {/* ── Clipped bg (photo + gradient) ── */}
         <div className="absolute inset-0 overflow-hidden" style={{ borderRadius: "38px" }}>
           <img
-            src="/img/1.png"
+            src="/img/1.webp"
             alt="Profile"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-[center_55%]"
           />
           <div
             className="absolute inset-0"
@@ -111,10 +111,10 @@ export default function LeftPanel() {
           style={{ minHeight: "520px", height: "clamp(520px, calc(100vh - 2rem), 900px)" }}
         >
           {/* TOP ROW */}
-          <div className="flex items-start justify-between p-4">
+          <div className="flex items-start justify-between pt-8 pl-8 pr-8 pb-4">
             {/* Logo */}
             <div
-              className="w-9 h-9 rounded-xl flex items-center justify-center"
+              className="w-12 h-12 rounded-xl flex items-center justify-center"
               style={{
                 background: "rgba(15,15,15,0.80)",
                 border: "1px solid rgba(255,255,255,0.10)",
@@ -137,7 +137,7 @@ export default function LeftPanel() {
                   key={s.label}
                   href="#"
                   aria-label={s.label}
-                  className="w-8 h-8 rounded-xl flex items-center justify-center text-white hover:scale-105 transition-transform"
+                  className="w-11 h-11 rounded-xl flex items-center justify-center text-white hover:scale-105 transition-transform"
                   style={{
                     background: "rgba(15,15,15,0.80)",
                     border: "1px solid rgba(255,255,255,0.10)",
@@ -158,9 +158,9 @@ export default function LeftPanel() {
           <div className="flex-1" />
 
           {/* BOTTOM */}
-          <div className="px-5 pb-5 pt-3">
+          <div className="px-8 pb-8 pt-3">
             <h1
-              className="font-grotesk font-bold text-white leading-tight mb-2"
+              className="font-grotesk font-bold text-white leading-tight mb-4"
               style={{ fontSize: "clamp(22px, 3.5vw, 32px)" }}
             >
               Hey, I&apos;m{" "}
@@ -173,12 +173,12 @@ export default function LeftPanel() {
               </span>
             </h1>
 
-            <p style={{ color: "rgba(255,255,255,0.50)", fontSize: "12px", lineHeight: "1.6", marginBottom: "14px" }}>
+            <p style={{ color: "rgba(255,255,255,0.50)", fontSize: "15px", lineHeight: "1.6", marginBottom: "2rem" }}>
               I help startups grow with smart design and no-code development,
               based in Cupertino, CA.
             </p>
 
-            <div style={{ height: "1px", background: "linear-gradient(to right, rgba(255,255,255,0.18), transparent)", marginBottom: "14px" }} />
+            <div style={{ height: "1px", background: "linear-gradient(to right, rgba(255,255,255), transparent)", marginBottom: "2rem" }} />
 
             {/* Buttons */}
             <div className="flex items-center gap-2">
@@ -256,8 +256,8 @@ export default function LeftPanel() {
             }}
           />
           <span
-            className="font-geist uppercase"
-            style={{ fontSize: "9px", letterSpacing: "0.18em", color: "var(--color-on-surface-variant)" }}
+            className="font-geist"
+            style={{ fontSize: "12px", letterSpacing: "0.1em", color: "var(--color-on-surface-variant)", fontWeight: "600" }}
           >
             Available for Work
           </span>

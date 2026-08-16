@@ -12,147 +12,147 @@
    ============================================ */
 :root {
   /* ── Core surfaces ── */
-  --color-background:                 #eeeee8;
-  --color-on-background:              #1a1a1a;
-  --color-surface:                    #f5f5f0;
-  --color-on-surface:                 #1a1a1a;
-  --color-surface-variant:            #e0e0d8;
-  --color-on-surface-variant:         #5a6355;
-  --color-surface-container:          #ffffff;
-  --color-surface-container-low:      #f0f0ea;
-  --color-surface-container-high:     #e8e8e2;
-  --color-surface-container-highest:  #dededa;
-  --color-surface-container-lowest:   #fafaf5;
-  --color-surface-bright:             #ffffff;
-  --color-surface-dim:                #dcdcd6;
-  --color-surface-tint:               #3aab52;
+  --color-background: #eeeee8;
+  --color-on-background: #1a1a1a;
+  --color-surface: #f5f5f0;
+  --color-on-surface: #1a1a1a;
+  --color-surface-variant: #e0e0d8;
+  --color-on-surface-variant: #5a6355;
+  --color-surface-container: #ffffff;
+  --color-surface-container-low: #f0f0ea;
+  --color-surface-container-high: #e8e8e2;
+  --color-surface-container-highest: #dededa;
+  --color-surface-container-lowest: #fafaf5;
+  --color-surface-bright: #ffffff;
+  --color-surface-dim: #dcdcd6;
+  --color-surface-tint: #3aab52;
   /* ── Primary (green) ── */
-  --color-primary:                    #3aab52;
-  --color-primary-fixed:              #b8f5c4;
-  --color-primary-fixed-dim:          #3aab52;
-  --color-primary-container:          #3aab52;
-  --color-on-primary:                 #ffffff;
-  --color-on-primary-fixed:           #002107;
-  --color-on-primary-fixed-variant:   #00531d;
-  --color-on-primary-container:       #003912;
-  --color-inverse-primary:            #77fd8c;
+  --color-primary: #3aab52;
+  --color-primary-fixed: #b8f5c4;
+  --color-primary-fixed-dim: #3aab52;
+  --color-primary-container: #3aab52;
+  --color-on-primary: #ffffff;
+  --color-on-primary-fixed: #002107;
+  --color-on-primary-fixed-variant: #00531d;
+  --color-on-primary-container: #003912;
+  --color-inverse-primary: #77fd8c;
   /* ── Secondary ── */
-  --color-secondary:                  #5a6355;
-  --color-secondary-fixed:            #dce8d5;
-  --color-secondary-fixed-dim:        #bfc9ba;
-  --color-secondary-container:        #dde8d6;
-  --color-on-secondary:               #ffffff;
-  --color-on-secondary-fixed:         #1a1e1a;
+  --color-secondary: #5a6355;
+  --color-secondary-fixed: #dce8d5;
+  --color-secondary-fixed-dim: #bfc9ba;
+  --color-secondary-container: #dde8d6;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-fixed: #1a1e1a;
   --color-on-secondary-fixed-variant: #3a4438;
-  --color-on-secondary-container:     #192018;
+  --color-on-secondary-container: #192018;
   /* ── Tertiary ── */
-  --color-tertiary:                   #7a4526;
-  --color-tertiary-container:         #ffdbca;
-  --color-tertiary-fixed:             #ffdbca;
-  --color-tertiary-fixed-dim:         #ffb68f;
-  --color-on-tertiary:                #ffffff;
-  --color-on-tertiary-fixed:          #331200;
-  --color-on-tertiary-fixed-variant:  #6c3a1c;
-  --color-on-tertiary-container:      #5a2e12;
+  --color-tertiary: #7a4526;
+  --color-tertiary-container: #ffdbca;
+  --color-tertiary-fixed: #ffdbca;
+  --color-tertiary-fixed-dim: #ffb68f;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-fixed: #331200;
+  --color-on-tertiary-fixed-variant: #6c3a1c;
+  --color-on-tertiary-container: #5a2e12;
   /* ── Error ── */
-  --color-error:                      #ba1a1a;
-  --color-error-container:            #ffdad6;
-  --color-on-error:                   #ffffff;
-  --color-on-error-container:         #410002;
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #410002;
   /* ── Outline ── */
-  --color-outline:                    #73796e;
-  --color-outline-variant:            #c2c9bc;
+  --color-outline: #73796e;
+  --color-outline-variant: #c2c9bc;
   /* ── Inverse ── */
-  --color-inverse-surface:            #2e312d;
-  --color-inverse-on-surface:         #f0f1eb;
+  --color-inverse-surface: #2e312d;
+  --color-inverse-on-surface: #f0f1eb;
 
   /* ── Component-specific tokens ── */
-  --glass-panel-bg:      rgba(255, 255, 255, 0.72);
-  --glass-panel-border:  rgba(0, 0, 0, 0.07);
-  --card-border-color:   #c2c2be;
-  --card-shadow:         0 0 0 1px rgba(0,0,0,0.04), 0 28px 70px rgba(0,0,0,0.20);
-  --notch-bg:            #e8e8e2;
-  --notch-border:        #c2c2be;
-  --badge-color:         rgba(30, 30, 30, 0.55);
-  --badge-inner-border:  rgba(0, 0, 0, 0.12);
-  --divider-color:       rgba(0, 0, 0, 0.10);
-  --avatar-border:       rgba(0, 0, 0, 0.10);
-  --scrollbar-track:     #eeeee8;
-  --scrollbar-thumb:     #c2c9bc;
-  --stat-number-color:   #1a1a1a;
+  --glass-panel-bg: rgba(255, 255, 255, 0.72);
+  --glass-panel-border: rgba(0, 0, 0, 0.07);
+  --card-border-color: #c2c2be;
+  --card-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 28px 70px rgba(0, 0, 0, 0.20);
+  --notch-bg: #e8e8e2;
+  --notch-border: #c2c2be;
+  --badge-color: rgba(30, 30, 30, 0.55);
+  --badge-inner-border: rgba(0, 0, 0, 0.12);
+  --divider-color: rgba(0, 0, 0, 0.10);
+  --avatar-border: rgba(0, 0, 0, 0.10);
+  --scrollbar-track: #eeeee8;
+  --scrollbar-thumb: #c2c9bc;
+  --stat-number-color: #1a1a1a;
   --section-label-color: #5a6355;
 }
 
 .dark {
   /* ── Core surfaces ── */
-  --color-background:                 #121414;
-  --color-on-background:              #e3e2e2;
-  --color-surface:                    #121414;
-  --color-on-surface:                 #e3e2e2;
-  --color-surface-variant:            #343535;
-  --color-on-surface-variant:         #bccab9;
-  --color-surface-container:          #1f2020;
-  --color-surface-container-low:      #1b1c1c;
-  --color-surface-container-high:     #292a2a;
-  --color-surface-container-highest:  #343535;
-  --color-surface-container-lowest:   #0d0e0f;
-  --color-surface-bright:             #383939;
-  --color-surface-dim:                #121414;
-  --color-surface-tint:               #59e073;
+  --color-background: #121414;
+  --color-on-background: #e3e2e2;
+  --color-surface: #121414;
+  --color-on-surface: #e3e2e2;
+  --color-surface-variant: #343535;
+  --color-on-surface-variant: #bccab9;
+  --color-surface-container: #1f2020;
+  --color-surface-container-low: #1b1c1c;
+  --color-surface-container-high: #292a2a;
+  --color-surface-container-highest: #343535;
+  --color-surface-container-lowest: #0d0e0f;
+  --color-surface-bright: #383939;
+  --color-surface-dim: #121414;
+  --color-surface-tint: #59e073;
   /* ── Primary (green) ── */
-  --color-primary:                    #77fd8c;
-  --color-primary-fixed:              #77fd8c;
-  --color-primary-fixed-dim:          #59e073;
-  --color-primary-container:          #59e073;
-  --color-on-primary:                 #003912;
-  --color-on-primary-fixed:           #002107;
-  --color-on-primary-fixed-variant:   #00531d;
-  --color-on-primary-container:       #006023;
-  --color-inverse-primary:            #006e29;
+  --color-primary: #77fd8c;
+  --color-primary-fixed: #77fd8c;
+  --color-primary-fixed-dim: #59e073;
+  --color-primary-container: #59e073;
+  --color-on-primary: #003912;
+  --color-on-primary-fixed: #002107;
+  --color-on-primary-fixed-variant: #00531d;
+  --color-on-primary-container: #006023;
+  --color-inverse-primary: #006e29;
   /* ── Secondary ── */
-  --color-secondary:                  #c6c6c7;
-  --color-secondary-fixed:            #e2e2e2;
-  --color-secondary-fixed-dim:        #c6c6c7;
-  --color-secondary-container:        #454747;
-  --color-on-secondary:               #2f3131;
-  --color-on-secondary-fixed:         #1a1c1c;
+  --color-secondary: #c6c6c7;
+  --color-secondary-fixed: #e2e2e2;
+  --color-secondary-fixed-dim: #c6c6c7;
+  --color-secondary-container: #454747;
+  --color-on-secondary: #2f3131;
+  --color-on-secondary-fixed: #1a1c1c;
   --color-on-secondary-fixed-variant: #454747;
-  --color-on-secondary-container:     #b4b5b5;
+  --color-on-secondary-container: #b4b5b5;
   /* ── Tertiary ── */
-  --color-tertiary:                   #ffdbca;
-  --color-tertiary-container:         #ffb68f;
-  --color-tertiary-fixed:             #ffdbca;
-  --color-tertiary-fixed-dim:         #ffb68f;
-  --color-on-tertiary:                #502408;
-  --color-on-tertiary-fixed:          #331200;
-  --color-on-tertiary-fixed-variant:  #6c3a1c;
-  --color-on-tertiary-container:      #7a4526;
+  --color-tertiary: #ffdbca;
+  --color-tertiary-container: #ffb68f;
+  --color-tertiary-fixed: #ffdbca;
+  --color-tertiary-fixed-dim: #ffb68f;
+  --color-on-tertiary: #502408;
+  --color-on-tertiary-fixed: #331200;
+  --color-on-tertiary-fixed-variant: #6c3a1c;
+  --color-on-tertiary-container: #7a4526;
   /* ── Error ── */
-  --color-error:                      #ffb4ab;
-  --color-error-container:            #93000a;
-  --color-on-error:                   #690005;
-  --color-on-error-container:         #ffdad6;
+  --color-error: #ffb4ab;
+  --color-error-container: #93000a;
+  --color-on-error: #690005;
+  --color-on-error-container: #ffdad6;
   /* ── Outline ── */
-  --color-outline:                    #879484;
-  --color-outline-variant:            #3d4a3c;
+  --color-outline: #879484;
+  --color-outline-variant: #3d4a3c;
   /* ── Inverse ── */
-  --color-inverse-surface:            #e3e2e2;
-  --color-inverse-on-surface:         #303031;
+  --color-inverse-surface: #e3e2e2;
+  --color-inverse-on-surface: #303031;
 
   /* ── Component-specific tokens ── */
-  --glass-panel-bg:      rgba(22, 22, 22, 0.5);
-  --glass-panel-border:  rgba(255, 255, 255, 0.06);
-  --card-border-color:   #636363;
-  --card-shadow:         0 0 0 1px rgba(0,0,0,0.5), 0 28px 70px rgba(0,0,0,0.75);
-  --notch-bg:            #2a2a2a;
-  --notch-border:        #636363;
-  --badge-color:         rgba(255, 255, 255, 0.35);
-  --badge-inner-border:  rgba(255, 255, 255, 0.12);
-  --divider-color:       rgba(255, 255, 255, 0.08);
-  --avatar-border:       rgba(255, 255, 255, 0.10);
-  --scrollbar-track:     #121414;
-  --scrollbar-thumb:     #343535;
-  --stat-number-color:   #e3e2e2;
+  --glass-panel-bg: rgba(22, 22, 22, 0.5);
+  --glass-panel-border: rgba(255, 255, 255, 0.06);
+  --card-border-color: #636363;
+  --card-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5), 0 28px 70px rgba(0, 0, 0, 0.75);
+  --notch-bg: #2a2a2a;
+  --notch-border: #636363;
+  --badge-color: rgba(255, 255, 255, 0.35);
+  --badge-inner-border: rgba(255, 255, 255, 0.12);
+  --divider-color: rgba(255, 255, 255, 0.08);
+  --avatar-border: rgba(255, 255, 255, 0.10);
+  --scrollbar-track: #121414;
+  --scrollbar-thumb: #343535;
+  --stat-number-color: #e3e2e2;
   --section-label-color: #bccab9;
 }
 
@@ -181,10 +181,22 @@
     color: var(--color-on-primary);
   }
 
-  ::-webkit-scrollbar { width: 4px; }
-  ::-webkit-scrollbar-track { background: var(--scrollbar-track); }
-  ::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 2px; }
-  ::-webkit-scrollbar-thumb:hover { background: var(--color-primary); }
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+  }
 }
 
 /* ============================================
@@ -236,7 +248,7 @@
     pointer-events: none;
     white-space: nowrap;
     border: 1px solid var(--glass-panel-border);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
     transform: translateX(8px);
   }
 
