@@ -75,7 +75,7 @@ export default function LeftPanel() {
         ref={panelRef}
         className="
           relative
-          xl:fixed xl:left-4 xl:top-4 xl:bottom-4
+          xl:fixed xl:left-4 xl:top-[80px] xl:bottom-4
           w-[calc(100%-2rem)] md:w-[420px] lg:w-[460px] xl:w-[500px]
           mx-4 md:mx-auto xl:mx-0
           mt-20 md:mt-8 xl:mt-0

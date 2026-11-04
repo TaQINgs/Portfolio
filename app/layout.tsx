@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import TopNavbar from "@/components/TopNavbar";
 
 export const metadata: Metadata = {
   title: {
@@ -50,7 +51,9 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-background text-on-background min-h-screen overflow-x-hidden">
-        {children}
+        <TopNavbar />
+        {/* md:pt-24 = 96px: 64px navbar (h-16) + 32px breathing room */}
+        <div className="md:pt-24">{children}</div>
       </body>
     </html>
   );

@@ -8,10 +8,10 @@ import StatsSection from "./StatsSection";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function HeroSection() {
-  const heroRef    = useRef<HTMLDivElement>(null);
+  const heroRef = useRef<HTMLDivElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
-  const badgeRef   = useRef<SVGSVGElement>(null);
-  const imageRef   = useRef<HTMLImageElement>(null);
+  const badgeRef = useRef<SVGSVGElement>(null);
+  const imageRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     if (!heroRef.current) return;
@@ -49,8 +49,8 @@ export default function HeroSection() {
   return (
     <div ref={heroRef} className="max-w-4xl mx-auto w-full mt-20 md:mt-0 relative">
 
-      {/* ── Desktop header bar ── */}
-      <div className="hidden md:flex justify-between items-center absolute -top-14 left-0 right-0">
+      {/* ── Desktop header bar (avatar + tanggal) ── */}
+      <div className="hidden md:flex justify-between items-center mb-10">
         <div className="flex items-center gap-3">
           {/* Avatar */}
           <div
