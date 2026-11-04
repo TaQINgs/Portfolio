@@ -92,7 +92,7 @@ export default function LeftPanel() {
         {/* ── Clipped bg (photo + gradient) ── */}
         <div className="absolute inset-0 overflow-hidden" style={{ borderRadius: "38px" }}>
           <img
-            src="/img/1.webp"
+            src="/Portfolio/img/1.webp"
             alt="Profile"
             className="w-full h-full object-cover object-[center_55%]"
           />
